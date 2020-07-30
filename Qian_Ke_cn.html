@@ -336,40 +336,22 @@
         <div class="summary">
           <p>
             <p>
-              Developed a custom framework based on Node.js, Appium and Nightwatch to effectively test GIF app 2.0
-              rewritten in React Native.
+              提出并开发了基于开源框架的前端自动化测试解决方案，分析团队需求并加以定制，实现了GIF产品的跨平台移动端自动化测试的从无到有和快速上线。
             </p>
             <p>
-              Created connectors for HTTP services, databases and messaging queues, and HTTP adapters in Spring Boot /
-              Swagger for services with no Javascript solution.
+              将数据驱动与解决方案深度融合，使其能高效处理每分钟数以百计的测试订单。构建了一系列适用于JavaScript环境的套件，简化了对企业内微服务架构的访问，实现了数据采集、生成、查询、接收的端到端全流程把控。
             </p>
             <p>
-              Implemented conditional parallelization of tests by orchestrating test orders, device allocation and API
-              access through <b>O</b>rder <b>M</b>anager server.
+              通过对测试订单、测试设备、API访问的集中管理，管线化和并行处理，缩短了前端集成测试的耗时，以便在一个迭代周期内及时收集和报告软件缺陷，溯源，复测及验收。
             </p>
             <p>
-              Added ES6+ features and async test commands not in the original framework by TestArmada.
+              对原有框架二次开发与整合优化，增添了测试用例模板化，测试数据DSL，异步命令，CI/CD，云测，多语种，多配置，结果报送以及BDD测试支持等实用特性。
             </p>
             <p>
-              Reduced refactor and reuse effort by introducing <b>A</b>daptive <b>T</b>est <b>V</b>ehicle, reusable
-              steps, <b>T</b>est <b>O</b>rder <b>DSL</b> and TestConf, a semantic configurator for test setups, store
-              environments, test plans,
-              etc. across all products & markets.
+              向公司其它团队以及第三方SaaS方案汲取经验，降低研发成本。在SaaS方案遇阻时果断采用自身与公司内部方案同时推进，确保自动化测试不中断。在BYOD项目落地后又逐步恢复与第三方公司的合作。
             </p>
             <p>
-              Developed extra reporters for TestArmada that connect to Jira and Slack, using ffmpeg to encode
-              screenshots as videos and uploading extra performance logs and ADB logs for complete diagnostics.
-            </p>
-            <p>
-              Developed Ripple, an in-house alternative to TestObject / Saucelabs written in Express.js with server side
-              Handlebars rendering and WebSocket for client-server-slave messaging that allowed self-enrolling or
-              reserving a device for
-              remote testing. Among the first to present a solution for TestArmada teams to use Plexus, a cloud UI
-              testing inititive at Walmart.
-            </p>
-            <p>
-              Enforced ESLint rules for quality purpose and set up CICD pipelines to publish GIF test dependencies,
-              verify test code PRs, trigger test executions and help manual testers with custom CI jobs.
+              与开发者沟通，提高应用的可测性与可靠性。帮助测试者熟悉自动化测试，对测试计划、范围、环境予以确认，对测试用例和代码编写予以指导。通过任务细分，经验分享，ESLint规范，Git流程等方式方法提升测试团队人员的技术水平。
             </p>
           </p>
         </div>
@@ -399,22 +381,16 @@
         <div class="summary">
           <p>
             <p>
-              Created a course authoring tool for Web Audio Lab, a virtual classroom platform for language learning
-              written in ColdFusion.
+              为网络听力教室（Web Audio Lab，一个线上外语学习平台）编写、维护和完善一个课件制作器（WALAT，WAL Authoring Tool），并创作课件。
             </p>
             <p>
-              Before WALAT, making courseware required script commands e.g. <code>record 10s</code>, <code>next
-                question</code>, coding / web development and manual effort to piece together content & multimedia. It
-              was difficult to meet the demand
-              from instructors and course staff.
+              在此之前, 课件须借由代码（包括一些难记的指令）来手动制作。而复杂的多媒体课件则要求作者有网页开发的能力，并将课件内容，脚本和多媒体文件手动打包上传。通常中心雇员会充当作者，在人手不够时往往难以满足课程讲师们的需求。
             </p>
             <p>
-              WALAT provided a web app written in Angular to streamline the courseware creation process with sets of
-              forms, page templates, drag-and-drop command editor and an asset manager for uploading and embedding media
-              resources.
+              WALAT提供了多种风格的表单、页面模板，可拖拽式指令编辑器及用于上传和嵌入多媒体资源的管理器，大大简化了创作流程。
             </p>
             <p>
-              Desktop version was made with Node, SQLite and Electron without provisioning extra server resources.
+              该Web应用运行于本地而不依赖服务器，并且为了便于分发，使用SQLite和Electron构建了一个桌面版本。
             </p>
           </p>
         </div>
@@ -443,22 +419,15 @@
         </div>
         <div class="summary">
           <p>
-            <p>Developed <b>S</b>am's <b>R</b>epor<b>t</b>ing Dashboard that provided insights of test results.</p>
+            <p>开发了SRT，一个提供测试结果数据可视化图表的全栈项目。</p>
             <p>
-              Built data pipelines to source data from TestRail API and Jenkins DB, store with Hibernate in MySQL DB and
-              expose via HTTP RESTful service.
+              SRT从TestRail API和Jenkins数据库调取数据，通过Hibernate和MySQL将数据持久化, 最终以RESTful服务的形式供仪表板使用。与之匹配的Web仪表板可以实现对自动化执行情况和测试通过情况的概括性分析，并可通过测试集、时间等参数查找到具体的测试执行情况。
             </p>
             <p>
-              Created a UI dashboard that displayed automation and pass / fail summary, with ability to filter by suites
-              & dates and drill down to individual tests.
+              通过对SQL语句结果进行缓存，加快了图表的载入速度，并在此基础上开发了后台界面来容纳不同的配置和计划任务。
             </p>
             <p>
-              Improved chart loading time by tens of seconds by caching SQL queries on an interval and further developed
-              an admin dashboard to schedule different tasks.
-            </p>
-            <p>
-              The highly customizable SRT was used by Sam's QE and later GIF for reporting its own backend E2E and
-              integration tests.
+              首发客户（山姆会员店）仍然在使用SRT汇总测试结果和提供维护，并且SRT经过容器化改造后被用于GIF后端的测试。
             </p>
           </p>
         </div>
