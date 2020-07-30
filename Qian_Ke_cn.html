@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
   <title>
-    Alex Qian
+    钱可 alex
   </title>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
   <style>
@@ -60,9 +60,16 @@
       font-weight: 400;
     }
 
-    ul {
-      margin-bottom: 0;
+    .mt5 {
       margin-top: 5px;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
     }
 
     section:not(.heading) {
@@ -141,7 +148,7 @@
 
     section h2 {
       font-size: 160%;
-      margin: 0 0 0.3em;
+      margin: 0.5em 0 0 0;
       color: #3c91c4;
       font-weight: 400;
     }
@@ -149,7 +156,7 @@
     /* Experience items */
 
     .item {
-      margin: 0 0 1em;
+      margin: 0;
       padding: 0;
     }
 
@@ -159,13 +166,13 @@
 
     .item header h3 {
       display: flex;
-      margin: 0.2em 1em 0.2em 0;
+      margin: 0.2em 0 0.2em 0;
       font-weight: 600;
     }
 
     .item .subheader {
       display: flex;
-      margin: 0.2em 1em 0.2em 0;
+      margin: 0.2em 0 0.2em 0;
     }
 
     .item header a {
@@ -174,8 +181,6 @@
 
     .item .position {
       font-weight: 600;
-      font-size: 100%;
-      margin: 0.2em 1em 0.2em 0;
     }
 
     .item .endDate,
@@ -189,15 +194,11 @@
 
     /* skills */
 
-    #skills .item {
-      margin: 0.5em 0;
-    }
-
     #skills .item .name {
       font-weight: 600;
       display: inline-block;
       margin: 0 1em 0 0;
-      width: 17%;
+      width: 15%;
       vertical-align: top;
     }
 
@@ -209,27 +210,11 @@
 
     /* education */
 
-    #education .item {
-      display: inline-block;
-      vertical-align: top;
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
     #education ul .header {
       display: inline-block;
       font-weight: 600;
       font-size: 100%;
       width: 65px;
-      margin: 0.2em 0.5em 0.2em 0;
-    }
-
-    #education .degree_projects {
-      padding-left: 0;
-    }
-
-    #education .degree_projects .company {
-      font-style: italic;
     }
 
     #education .courses {
@@ -243,22 +228,8 @@
 
     #education .courses li+li:before {
       content: '·';
-      margin: auto 5px auto 3px;
+      margin: auto 3px auto 1px;
       display: inline-block;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .row .col {
-      position: relative;
-      width: 100%;
-      min-height: 1px;
-      flex-basis: 0;
-      flex-grow: 1;
-      max-width: 100%;
     }
 
     .space-between {
@@ -311,7 +282,7 @@
     </section>
     <section class="experience">
       <h2>工作经历</h2>
-      <section class="item">
+      <div class="item">
         <header>
           <h3 class="name space-between">
             <span>Walmart GeC, Global Integrated Fulfillment</span>
@@ -329,7 +300,7 @@
               2018.06
             </span>
             <span class="endDate">
-              - 至今
+              - 至今 阿肯色
             </span>
           </div>
         </div>
@@ -355,8 +326,8 @@
             </p>
           </p>
         </div>
-      </section>
-      <section class="item">
+      </div>
+      <div class="item">
         <header>
           <h3 class="name space-between">
             <span>Cornell University, Language Resource Center</span>
@@ -384,18 +355,16 @@
               为网络听力教室（Web Audio Lab，一个线上外语学习平台）编写、维护和完善一个课件制作器（WALAT，WAL Authoring Tool），并创作课件。
             </p>
             <p>
-              在此之前, 课件须借由代码（包括一些难记的指令）来手动制作。而复杂的多媒体课件则要求作者有网页开发的能力，并将课件内容，脚本和多媒体文件手动打包上传。通常中心雇员会充当作者，在人手不够时往往难以满足课程讲师们的需求。
+              在此之前,
+              课件须借由代码（包括一些难记的指令）来手动制作。而复杂的多媒体课件则要求作者有网页开发的能力，并将课件内容，脚本和多媒体文件手动打包上传。通常中心雇员会充当作者，在人手不够时往往难以满足课程讲师们的需求。
             </p>
             <p>
-              WALAT提供了多种风格的表单、页面模板，可拖拽式指令编辑器及用于上传和嵌入多媒体资源的管理器，大大简化了创作流程。
-            </p>
-            <p>
-              该Web应用运行于本地而不依赖服务器，并且为了便于分发，使用SQLite和Electron构建了一个桌面版本。
+              WALAT提供了多种风格的表单、页面模板，可拖拽式指令编辑器及用于上传和嵌入多媒体资源的管理器，大大简化了创作流程。该Web应用运行于本地而不依赖服务器，并且为了便于分发，使用SQLite和Electron构建了一个桌面版本。
             </p>
           </p>
         </div>
-      </section>
-      <section class="item">
+      </div>
+      <div class="item">
         <header>
           <h3 class="name space-between">
             <span>WalmartLabs</span>
@@ -418,64 +387,20 @@
           </div>
         </div>
         <div class="summary">
+          <p>开发了SRT，一个提供测试结果数据可视化图表的Java全栈项目。</p>
           <p>
-            <p>开发了SRT，一个提供测试结果数据可视化图表的全栈项目。</p>
-            <p>
-              SRT从TestRail API和Jenkins数据库调取数据，通过Hibernate和MySQL将数据持久化, 最终以RESTful服务的形式供仪表板使用。与之匹配的Web仪表板可以实现对自动化执行情况和测试通过情况的概括性分析，并可通过测试集、时间等参数查找到具体的测试执行情况。
-            </p>
-            <p>
-              通过对SQL语句结果进行缓存，加快了图表的载入速度，并在此基础上开发了后台界面来容纳不同的配置和计划任务。
-            </p>
-            <p>
-              首发客户（山姆会员店）仍然在使用SRT汇总测试结果和提供维护，并且SRT经过容器化改造后被用于GIF后端的测试。
-            </p>
+            SRT从TestRail API和Jenkins数据库调取数据，通过Hibernate和MySQL将数据持久化,
+            最终以RESTful服务的形式供仪表板使用。与之匹配的Web仪表板可以实现对自动化执行情况和测试通过情况的概括性分析，并可通过测试集、时间等参数查找到具体的测试执行情况。
+          </p>
+          <p>
+            通过对SQL语句结果进行缓存，加快了图表的载入速度，并在此基础上开发了后台界面来容纳不同的配置和计划任务。
+          </p>
+          <p>
+            首发客户（山姆会员店）仍然在使用SRT汇总测试结果，并且SRT经过容器化改造后被用于GIF后端的测试。
           </p>
         </div>
-      </section>
-      <br />
-      <h2>毕业设计</h2>
-      <section class="item">
-        <header>
-          <h3 class="name space-between">
-            <span>Microsoft Azure</span>
-            <span>微软 Azure</span>
-          </h3>
-        </header>
-        <div class="subheader flex space-between">
-          <div>
-            <span class="position">
-              开发者
-            </span>
-          </div>
-          <div>
-            <span class="startDate">
-              2017.09
-            </span>
-            <span class="endDate">
-              - 2017.12 纽约
-            </span>
-          </div>
-        </div>
-        <div class="summary">
-          <p>
-            Created a browser-based cluster configurator for Azure Service Fabric on-prem users with Ember.js.
-          </p>
-          <p>
-            Lead a team of 3 and worked closely with the client during feasibility studies, requirements analysis, UX &
-            wireframing, design & developing.
-          </p>
-          <p>
-            Visualized cluster hierarchy with D3.js and Matter.js the physics engine, and supported dragging-dropping
-            and editing directly on the graph.
-          </p>
-          <p>
-            Provided two way conversion between visual editor and JSON editor. Created a validation feature for missing
-            or incorrect fields.
-          </p>
-        </div>
-      </section>
+      </div>
     </section>
-    <br />
     <section id="education">
       <h2>教育背景</h2>
       <div class="item">
@@ -485,35 +410,42 @@
             <span>康奈尔大学</span>
           </h3>
         </header>
-        <div class="dates">
-          <span class="startDate">
-            2017.08
-          </span>
-          <span class="endDate">
-            - 2018.05
-          </span>
+        <div class="subheader flex space-between">
+          <div>
+            <span class="studyType">
+              硕士
+            </span>
+            <span class="area">
+              - 信息科学
+            </span>
+            <span>- GPA: 3.26</span>
+          </div>
+          <div class="dates">
+            <span class="startDate">
+              2017.08
+            </span>
+            <span class="endDate">
+              - 2018.05 纽约
+            </span>
+          </div>
         </div>
         <div class="qualification">
-          <span class="studyType">
-            硕士
-          </span>
-          <span class="area">
-            - 信息科学
-          </span>
-          <span>- GPA: 3.26</span>
-          <ul class="courses">
+          <ul class="courses mt0 mb0">
             <span class="header">相关课程</span>
-            <li>E-commerce</li>
-            <li>Cloud Computing</li>
-            <li>Ubiquitous Computing (Python, Java, Android)</li>
-            <li>Interactive Information Visualization (Javascript, D3)</li>
-            <li>Game Theory</li>
-            <li>Natural Language Processing (Python, NumPy, TensorFlow)</li>
+            <li>电子商务</li>
+            <li>云计算</li>
+            <li>普适计算 (Python, Java, Android)</li>
+            <li>信息可视化交互 (Javascript, D3)</li>
+            <li>NLP (Python, NumPy, TensorFlow)</li>
           </ul>
-          <ul class="courses">
-            <span class="header">荣誉</span>
-            <li>Fall 2014 Dean's List 2014秋季院长奖</li>
+          <ul class="courses mt0 mb0">
+            <span class="header">毕业设计</span>
+            <li>Microsoft Azure</li>
+            <li>基于Web的面向本地部署Azure Service Fabric的用户的群集配置工具</li>
           </ul>
+          <div class="summary">
+            带领三人团队和客户完成可行性研究，需求分析，UX设计,产品功能的实现和最终交付。使用开源的D3.js和Matter.js物理引擎可视化呈现了群集的层次结构，视图元素可被拖拽并被直接编辑。提供了可视化结构和JSON配置之间的互转。代码编辑器提供了基于JSON Schema的验证功能来提示用户缺失或错误的字段。
+          </div>
         </div>
       </div>
       <div class="item">
@@ -523,101 +455,101 @@
             <span>康奈尔大学</span>
           </h3>
         </header>
-        <div class="dates">
-          <span class="startDate">
-            2013.08
-          </span>
-          <span class="endDate">
-            - 2017.05
-          </span>
+        <div class="subheader flex space-between">
+          <div>
+            <span class="studyType">
+              学士
+            </span>
+            <span class="area">
+              - 计算机科学, 信息科学 双专业
+            </span>
+            <span>- GPA: 3.12</span>
+          </div>
+          <div class="dates">
+            <span class="startDate">
+              2013.08
+            </span>
+            <span class="endDate">
+              - 2017.05 纽约
+            </span>
+          </div>
         </div>
         <div class="qualification">
-          <span class="studyType">
-            学士
-          </span>
-          <span class="area">
-            - 计算机科学, 信息科学 双专业
-          </span>
-          <span>- GPA: 3.12</span>
-          <ul class="courses">
+          <ul class="courses mt0 mb0">
             <span class="header">相关课程</span>
-            <li>Web Design (PHP)</li>
-            <li>Data-driven Web Pages (HTML, Javascript, SVG, D3)</li>
-            <li>Database Systems (SQL, Java)</li>
-            <li>OO Programming (Java)</li>
-            <li>Software Engineering (Rails)</li>
-            <li>Discrete Structures</li>
-            <li>Functional Programming (OCaml)</li>
-            <li>Algorithm Analysis</li>
-            <li>Computer Vision (Python, Caffe)</li>
-            <li>Language and Information (Python, NumPy)</li>
-            <li>Machine Learning (Python)</li>
-            <li>Operating Systems (C)</li>
-            <li>C++ Programming</li>
+            <li>Web设计 (PHP)</li>
+            <li>数据驱动网页 (HTML, Javascript, SVG, D3)</li>
+            <li>数据库系统 (SQL, Java)</li>
+            <li>面向对象 (Java)</li>
+            <li>软件工程 (Rails)</li>
+            <li>离散数学</li>
+            <li>函数编程 (OCaml)</li>
+            <li>算法分析</li>
+            <li>计算机视觉 (Python, Caffe)</li>
+            <li>语言信息检索 (Python, NumPy)</li>
+            <li>机器学习 (Python)</li>
+            <li>操作系统 (C)</li>
+            <li>C++</li>
           </ul>
-          <section class="item">
-            <span class="position">
-              MATLAB Consultant
-            </span>
-            <span class="startDate">
-              Aug 2016
-            </span>
-            <span class="endDate">
-              - May 2017
-            </span>
-            <div class="summary">
-              <p>
-                <p>Held labs and tutoring sessions for students. Worked with graduate TA in classes. Graded projects and
-                  exams.</p>
-              </p>
+          <ul class="courses mt0 mb0">
+            <span class="header">荣誉</span>
+            <li>Fall 2014 Dean's List（2014秋季院长奖）</li>
+          </ul>
+          <div class="subheader flex space-between">
+            <div>
+              <span class="position">
+                MATLAB 课程顾问
+              </span>
             </div>
-          </section>
-          <section class="item">
-            <span class="position">
-              Student Assembly Tech Committee Developer
-            </span>
-            <span class="startDate">
-              Oct 2015
-            </span>
-            <span class="endDate">
-              - Jun 2016
-            </span>
-            <div class="summary">
-              <p>
-                <p>
-                  Course planning was every student's nightmare before each semester. While Cornell was famous for "any
-                  person, any study" it was also subject to time, seating and workload.
-                </p>
-                <p>Built a course scheduling web tool with Node, Swagger API & React for fast & informed decision.</p>
-              </p>
+            <div>
+              <span class="startDate">
+                2016.08
+              </span>
+              <span class="endDate">
+                - 2017.05
+              </span>
             </div>
-          </section>
+          </div>
+          <div class="summary">
+            主持小课和辅导课，在课堂上为助教提供支持，课后批阅学生作业和试卷。
+          </div>
+          <div class="subheader flex space-between">
+            <div>
+              <span class="position">
+                学生会技术部开发者
+              </span>
+            </div>
+            <div>
+              <span class="startDate">
+                2015.10
+              </span>
+              <span class="endDate">
+                - 2016.06
+              </span>
+            </div>
+          </div>
+          <div class="summary">
+            虽然校训有云：“凡事皆可学。”但这往往取决于时间，上座率和课业压力。主导开发了一个选课Web工具解决一直困扰学生的新学期选课问题。
+          </div>
         </div>
       </div>
     </section>
     <section id="skills">
-      <h2>技能证书</h2>
-      <div class="item">
+      <h2>技能其他</h2>
+      <div class="item mb0">
         <div class="name">
           语言能力
         </div>
         <div class="keywords">
           汉语普通话 , 英语
         </div>
-        <div class="keywords">
-          Java , Javascript , HTML/CSS , JSON , YAML , Python , SQL , bash , Ruby , C++ , PHP , MATLAB , C# , Swift
-        </div>
       </div>
-      <div class="item">
+      <div class="item mb0">
         <div class="name">
-          其他
+          专业技能
         </div>
         <div class="keywords">
-          Node , Angular , React , Ember.js , Handlebars , jQuery , D3 , Android , iOS , Electron , Git , Linux , Grails
-          , Spring Boot , Express.js , RESTful , API , WebSocket , Swagger , micro-services , Rails , Tomcat , Babel ,
-          gulp , Gradle,
-          Maven, Jenkins , Docker , Heroku , Mocha , WebDriver , Appium , OneOps , Azure , AWS , machine learning ,
-          computer vision , data analytics , reading , writing , communication , collaboration
+          Javascript , Java , HTML/CSS , SQL , Python , Shell , 移动开发与测试
         </div>
       </div>
     </section>
