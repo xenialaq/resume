@@ -1,0 +1,658 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>
+    Alex Qian
+  </title>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+  <style>
+    @font-face {
+      font-family: zcool-xiaowei;
+      src: url("./fonts/zcool-xiaowei.otf");
+    }
+
+    @font-face {
+      font-family: Source Han Sans;
+      src: url("./fonts/SourceHanSansCN-Light.otf");
+    }
+
+    @font-face {
+      font-family: openmoji;
+      src: url("./fonts/OpenMoji-Color.ttf");
+    }
+
+    body {
+      background: #fff;
+      font: 16px 'Source Han Sans', Helvetica, Arial, sans-serif;
+      line-height: 1.3;
+      margin: 0;
+      color: #323232;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    code {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-family: 'zcool-xiaowei';
+    }
+
+    em {
+      color: #039be5;
+    }
+
+    p {
+      line-height: 1.2;
+      margin-block-start: .25em;
+      margin-block-end: .25em;
+    }
+
+    a {
+      color: #323232;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    ul {
+      margin-bottom: 0;
+      margin-top: 5px;
+    }
+
+    section:not(.heading) {
+      margin: 0.5em 0 0;
+    }
+
+    section.heading {
+      margin: 0.5em 0;
+    }
+
+    blockquote {
+      margin: 0 0 1em;
+    }
+
+    #resume {
+      margin: 2em 2em 0 2.5em;
+      max-width: 760px;
+    }
+
+    /* Resume heading */
+
+    .heading header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 1.5em;
+    }
+
+    .heading header h1 {
+      color: #999;
+      font-size: 380%;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .heading header h1 .sur {
+      color: #666;
+    }
+
+    .heading header h2 {
+      font-size: 140%;
+      margin: 0;
+      font-weight: 400;
+      font-family: openmoji;
+    }
+
+    .heading header .contact {
+      margin-top: 0;
+      flex-direction: column;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .heading header .contact .detail {
+      margin: 0 1em 0 0;
+    }
+
+    .heading header .contact .detail i,
+    .heading header .contact .profile i {
+      width: 16px;
+      margin-right: 4px;
+    }
+
+    .profile {
+      display: inline-block;
+      margin: 0 1em 0 0;
+    }
+
+    .profile>span,
+    .profile>strong {
+      display: inline-block;
+      margin: 0 1em 0 0;
+    }
+
+    /* section / line breaks */
+
+    section h2 {
+      font-size: 160%;
+      margin: 0 0 0.3em;
+      color: #3c91c4;
+      font-weight: 400;
+    }
+
+    /* Experience items */
+
+    .item {
+      margin: 0 0 1em;
+      padding: 0;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item header h3 {
+      display: flex;
+      margin: 0.2em 1em 0.2em 0;
+      font-weight: 600;
+    }
+
+    .item .subheader {
+      display: flex;
+      margin: 0.2em 1em 0.2em 0;
+    }
+
+    .item header a {
+      display: inline-block;
+    }
+
+    .item .position {
+      font-weight: 600;
+      font-size: 100%;
+      margin: 0.2em 1em 0.2em 0;
+    }
+
+    .item .endDate,
+    .item .startDate {
+      color: #6b6b6b;
+    }
+
+    .item .highlights {
+      list-style: square;
+    }
+
+    /* skills */
+
+    #skills .item {
+      margin: 0.5em 0;
+    }
+
+    #skills .item .name {
+      font-weight: 600;
+      display: inline-block;
+      margin: 0 1em 0 0;
+      width: 17%;
+      vertical-align: top;
+    }
+
+    #skills .item .keywords {
+      display: inline-block;
+      width: 80%;
+      vertical-align: top;
+    }
+
+    /* education */
+
+    #education .item {
+      display: inline-block;
+      vertical-align: top;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    #education ul .header {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 100%;
+      width: 65px;
+      margin: 0.2em 0.5em 0.2em 0;
+    }
+
+    #education .degree_projects {
+      padding-left: 0;
+    }
+
+    #education .degree_projects .company {
+      font-style: italic;
+    }
+
+    #education .courses {
+      padding-left: 0;
+    }
+
+    #education .courses li {
+      display: inline;
+      line-height: 1;
+    }
+
+    #education .courses li+li:before {
+      content: '·';
+      margin: auto 5px auto 3px;
+      display: inline-block;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row .col {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+  </style>
+  <style media="print">
+    body {
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="resume">
+    <section class="heading">
+      <header>
+        <div>
+          <h1>
+            <span class="sur">钱</span><span>可</span> <small>alex</small>
+          </h1>
+        </div>
+        <div class="contact">
+          <span class="detail">
+            <i class="fa fa-map-signs fa-fw"></i>
+            <a href="javascript:void(0)">Suzhou, Jiangsu</a>
+          </span>
+          <span class="detail">
+            <i class="fa fa-fw"></i>
+            <a href="javascript:void(0)">江苏 苏州</a>
+          </span>
+          <span class="detail">
+            <i class="fa fa-envelope-o fa-fw"></i>
+            <a href="mailto:ke@mnch.xyz">ke@mnch.xyz</a>
+          </span>
+          <span class="detail">
+            <i class="fa fa-phone fa-fw"></i>
+            <a href="tel:6786608988">185 0157 3024</a>
+          </span>
+          <div class="profile">
+            <span class="username">
+              <a href="https://github.com/xenialaq">
+                <i class="fa fa-github fa-fw"></i>
+                github.com/xenialaq
+              </a>
+            </span>
+          </div>
+        </div>
+      </header>
+    </section>
+    <section class="experience">
+      <h2>工作经历</h2>
+      <section class="item">
+        <header>
+          <h3 class="name space-between">
+            <span>Walmart GeC, Global Integrated Fulfillment</span>
+            <span>沃尔玛电商全球集成送配</span>
+          </h3>
+        </header>
+        <div class="subheader flex space-between">
+          <div>
+            <span class="position">
+              自动化测试工程师 III
+            </span>
+          </div>
+          <div>
+            <span class="startDate">
+              2018.06
+            </span>
+            <span class="endDate">
+              - 至今
+            </span>
+          </div>
+        </div>
+        <div class="summary">
+          <p>
+            <p>
+              Developed a custom framework based on Node.js, Appium and Nightwatch to effectively test GIF app 2.0
+              rewritten in React Native.
+            </p>
+            <p>
+              Created connectors for HTTP services, databases and messaging queues, and HTTP adapters in Spring Boot /
+              Swagger for services with no Javascript solution.
+            </p>
+            <p>
+              Implemented conditional parallelization of tests by orchestrating test orders, device allocation and API
+              access through <b>O</b>rder <b>M</b>anager server.
+            </p>
+            <p>
+              Added ES6+ features and async test commands not in the original framework by TestArmada.
+            </p>
+            <p>
+              Reduced refactor and reuse effort by introducing <b>A</b>daptive <b>T</b>est <b>V</b>ehicle, reusable
+              steps, <b>T</b>est <b>O</b>rder <b>DSL</b> and TestConf, a semantic configurator for test setups, store
+              environments, test plans,
+              etc. across all products & markets.
+            </p>
+            <p>
+              Developed extra reporters for TestArmada that connect to Jira and Slack, using ffmpeg to encode
+              screenshots as videos and uploading extra performance logs and ADB logs for complete diagnostics.
+            </p>
+            <p>
+              Developed Ripple, an in-house alternative to TestObject / Saucelabs written in Express.js with server side
+              Handlebars rendering and WebSocket for client-server-slave messaging that allowed self-enrolling or
+              reserving a device for
+              remote testing. Among the first to present a solution for TestArmada teams to use Plexus, a cloud UI
+              testing inititive at Walmart.
+            </p>
+            <p>
+              Enforced ESLint rules for quality purpose and set up CICD pipelines to publish GIF test dependencies,
+              verify test code PRs, trigger test executions and help manual testers with custom CI jobs.
+            </p>
+          </p>
+        </div>
+      </section>
+      <section class="item">
+        <header>
+          <h3 class="name space-between">
+            <span>Cornell University, Language Resource Center</span>
+            <span>康奈尔大学语言中心</span>
+          </h3>
+        </header>
+        <div class="subheader flex space-between">
+          <div>
+            <span class="position">
+              开发者
+            </span>
+          </div>
+          <div>
+            <span class="startDate">
+              2017.06
+            </span>
+            <span class="endDate">
+              - 2018.05 纽约
+            </span>
+          </div>
+        </div>
+        <div class="summary">
+          <p>
+            <p>
+              Created a course authoring tool for Web Audio Lab, a virtual classroom platform for language learning
+              written in ColdFusion.
+            </p>
+            <p>
+              Before WALAT, making courseware required script commands e.g. <code>record 10s</code>, <code>next
+                question</code>, coding / web development and manual effort to piece together content & multimedia. It
+              was difficult to meet the demand
+              from instructors and course staff.
+            </p>
+            <p>
+              WALAT provided a web app written in Angular to streamline the courseware creation process with sets of
+              forms, page templates, drag-and-drop command editor and an asset manager for uploading and embedding media
+              resources.
+            </p>
+            <p>
+              Desktop version was made with Node, SQLite and Electron without provisioning extra server resources.
+            </p>
+          </p>
+        </div>
+      </section>
+      <section class="item">
+        <header>
+          <h3 class="name space-between">
+            <span>WalmartLabs</span>
+            <span>沃尔玛实验室</span>
+          </h3>
+        </header>
+        <div class="subheader flex space-between">
+          <div>
+            <span class="position">
+              工具与自动化实习生
+            </span>
+          </div>
+          <div>
+            <span class="startDate">
+              2016.06
+            </span>
+            <span class="endDate">
+              - 2016.08 加州
+            </span>
+          </div>
+        </div>
+        <div class="summary">
+          <p>
+            <p>Developed <b>S</b>am's <b>R</b>epor<b>t</b>ing Dashboard that provided insights of test results.</p>
+            <p>
+              Built data pipelines to source data from TestRail API and Jenkins DB, store with Hibernate in MySQL DB and
+              expose via HTTP RESTful service.
+            </p>
+            <p>
+              Created a UI dashboard that displayed automation and pass / fail summary, with ability to filter by suites
+              & dates and drill down to individual tests.
+            </p>
+            <p>
+              Improved chart loading time by tens of seconds by caching SQL queries on an interval and further developed
+              an admin dashboard to schedule different tasks.
+            </p>
+            <p>
+              The highly customizable SRT was used by Sam's QE and later GIF for reporting its own backend E2E and
+              integration tests.
+            </p>
+          </p>
+        </div>
+      </section>
+      <br />
+      <h2>毕业设计</h2>
+      <section class="item">
+        <header>
+          <h3 class="name space-between">
+            <span>Microsoft Azure</span>
+            <span>微软 Azure</span>
+          </h3>
+        </header>
+        <div class="subheader flex space-between">
+          <div>
+            <span class="position">
+              开发者
+            </span>
+          </div>
+          <div>
+            <span class="startDate">
+              2017.09
+            </span>
+            <span class="endDate">
+              - 2017.12 纽约
+            </span>
+          </div>
+        </div>
+        <div class="summary">
+          <p>
+            Created a browser-based cluster configurator for Azure Service Fabric on-prem users with Ember.js.
+          </p>
+          <p>
+            Lead a team of 3 and worked closely with the client during feasibility studies, requirements analysis, UX &
+            wireframing, design & developing.
+          </p>
+          <p>
+            Visualized cluster hierarchy with D3.js and Matter.js the physics engine, and supported dragging-dropping
+            and editing directly on the graph.
+          </p>
+          <p>
+            Provided two way conversion between visual editor and JSON editor. Created a validation feature for missing
+            or incorrect fields.
+          </p>
+        </div>
+      </section>
+    </section>
+    <br />
+    <section id="education">
+      <h2>教育背景</h2>
+      <div class="item">
+        <header>
+          <h3 class="name space-between">
+            <span>Cornell University</span>
+            <span>康奈尔大学</span>
+          </h3>
+        </header>
+        <div class="dates">
+          <span class="startDate">
+            2017.08
+          </span>
+          <span class="endDate">
+            - 2018.05
+          </span>
+        </div>
+        <div class="qualification">
+          <span class="studyType">
+            硕士
+          </span>
+          <span class="area">
+            - 信息科学
+          </span>
+          <span>- GPA: 3.26</span>
+          <ul class="courses">
+            <span class="header">相关课程</span>
+            <li>E-commerce</li>
+            <li>Cloud Computing</li>
+            <li>Ubiquitous Computing (Python, Java, Android)</li>
+            <li>Interactive Information Visualization (Javascript, D3)</li>
+            <li>Game Theory</li>
+            <li>Natural Language Processing (Python, NumPy, TensorFlow)</li>
+          </ul>
+          <ul class="courses">
+            <span class="header">荣誉</span>
+            <li>Fall 2014 Dean's List 2014秋季院长奖</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <header>
+          <h3 class="name space-between">
+            <span>Cornell University</span>
+            <span>康奈尔大学</span>
+          </h3>
+        </header>
+        <div class="dates">
+          <span class="startDate">
+            2013.08
+          </span>
+          <span class="endDate">
+            - 2017.05
+          </span>
+        </div>
+        <div class="qualification">
+          <span class="studyType">
+            学士
+          </span>
+          <span class="area">
+            - 计算机科学, 信息科学 双专业
+          </span>
+          <span>- GPA: 3.12</span>
+          <ul class="courses">
+            <span class="header">相关课程</span>
+            <li>Web Design (PHP)</li>
+            <li>Data-driven Web Pages (HTML, Javascript, SVG, D3)</li>
+            <li>Database Systems (SQL, Java)</li>
+            <li>OO Programming (Java)</li>
+            <li>Software Engineering (Rails)</li>
+            <li>Discrete Structures</li>
+            <li>Functional Programming (OCaml)</li>
+            <li>Algorithm Analysis</li>
+            <li>Computer Vision (Python, Caffe)</li>
+            <li>Language and Information (Python, NumPy)</li>
+            <li>Machine Learning (Python)</li>
+            <li>Operating Systems (C)</li>
+            <li>C++ Programming</li>
+          </ul>
+          <section class="item">
+            <span class="position">
+              MATLAB Consultant
+            </span>
+            <span class="startDate">
+              Aug 2016
+            </span>
+            <span class="endDate">
+              - May 2017
+            </span>
+            <div class="summary">
+              <p>
+                <p>Held labs and tutoring sessions for students. Worked with graduate TA in classes. Graded projects and
+                  exams.</p>
+              </p>
+            </div>
+          </section>
+          <section class="item">
+            <span class="position">
+              Student Assembly Tech Committee Developer
+            </span>
+            <span class="startDate">
+              Oct 2015
+            </span>
+            <span class="endDate">
+              - Jun 2016
+            </span>
+            <div class="summary">
+              <p>
+                <p>
+                  Course planning was every student's nightmare before each semester. While Cornell was famous for "any
+                  person, any study" it was also subject to time, seating and workload.
+                </p>
+                <p>Built a course scheduling web tool with Node, Swagger API & React for fast & informed decision.</p>
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>技能证书</h2>
+      <div class="item">
+        <div class="name">
+          语言能力
+        </div>
+        <div class="keywords">
+          汉语普通话 , 英语
+        </div>
+        <div class="keywords">
+          Java , Javascript , HTML/CSS , JSON , YAML , Python , SQL , bash , Ruby , C++ , PHP , MATLAB , C# , Swift
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">
+          其他
+        </div>
+        <div class="keywords">
+          Node , Angular , React , Ember.js , Handlebars , jQuery , D3 , Android , iOS , Electron , Git , Linux , Grails
+          , Spring Boot , Express.js , RESTful , API , WebSocket , Swagger , micro-services , Rails , Tomcat , Babel ,
+          gulp , Gradle,
+          Maven, Jenkins , Docker , Heroku , Mocha , WebDriver , Appium , OneOps , Azure , AWS , machine learning ,
+          computer vision , data analytics , reading , writing , communication , collaboration
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
