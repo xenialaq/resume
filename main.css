@@ -1,0 +1,230 @@
+@font-face {
+    font-family: zcool-xiaowei;
+    src: url("./fonts/zcool-xiaowei.otf");
+}
+
+@font-face {
+    font-family: Source Han Sans;
+    src: url("./fonts/SourceHanSansCN-Light.otf");
+}
+
+body {
+    background: #fff;
+    font: 16px 'Source Han Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+    margin: 0;
+    color: #323232;
+}
+
+.flex {
+    display: flex;
+}
+
+code {
+    font-size: 14px;
+}
+
+h2 {
+    font-family: 'zcool-xiaowei';
+}
+
+em {
+    color: #039be5;
+}
+
+p {
+    line-height: 1.2;
+    margin-block-start: .25em;
+    margin-block-end: .25em;
+}
+
+a {
+    color: #323232;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+section:not(.heading) {
+    margin: 0.5em 0 0;
+}
+
+section.heading {
+    margin: 0.5em 0;
+}
+
+blockquote {
+    margin: 0 0 1em;
+}
+
+#resume {
+    margin: 2em 2em 0 2.5em;
+    max-width: 760px;
+}
+
+/* Resume heading */
+
+.heading header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.5em;
+}
+
+.heading header h1 {
+    color: #999;
+    font-size: 380%;
+    margin: 0;
+    font-weight: 400;
+}
+
+.heading header h1 .sur {
+    color: #666;
+}
+
+.heading header h2 {
+    font-size: 140%;
+    margin: 0;
+    font-weight: 400;
+}
+
+.heading header .contact {
+    margin-top: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heading header .contact .detail {
+    margin: 0 1em 0 0;
+}
+
+.heading header .contact .detail i,
+.heading header .contact .profile i {
+    width: 16px;
+    margin-right: 4px;
+    color: slategray;
+}
+
+.profile {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+
+.profile>span,
+.profile>strong {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+
+/* section / line breaks */
+
+section h2 {
+    font-size: 160%;
+    margin: 0.5em 0 0 0;
+    color: #3c91c4;
+    font-weight: 400;
+}
+
+/* Experience items */
+
+.item {
+    margin: 0;
+    padding: 0;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item header h3 {
+    display: flex;
+    margin: 0.2em 0 0.2em 0;
+    font-weight: 600;
+}
+
+.item .subheader {
+    display: flex;
+    margin: 0.2em 0 0.2em 0;
+}
+
+.item header a {
+    display: inline-block;
+}
+
+.item .position {
+    font-weight: 600;
+}
+
+.item .endDate,
+.item .startDate {
+    color: #6b6b6b;
+}
+
+.item .highlights {
+    list-style: square;
+}
+
+/* skills */
+
+#skills .item .name {
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    width: 65px;
+    vertical-align: top;
+}
+
+#skills .item .keywords {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+}
+
+#skills .item .list {
+    display: inline-block;
+    padding: 0;
+}
+
+#skills .item .list li {
+    list-style: none;
+}
+
+/* education */
+
+#education ul .header {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 100%;
+    width: 65px;
+}
+
+#education .courses {
+    padding-left: 0;
+}
+
+#education .courses li {
+    display: inline;
+    line-height: 1;
+}
+
+#education .courses li+li:before {
+    content: '·';
+    margin: auto 3px auto 1px;
+    display: inline-block;
+}
+
+.space-between {
+    justify-content: space-between;
+}
