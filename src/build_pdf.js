@@ -20,33 +20,33 @@ const {
     product: 'chrome',
     executablePath: CHROME_PATH,
     args: [
-      '--disable-extensions'
-    ]
+      '--disable-extensions',
+    ],
   });
   const page = await browser.newPage();
   const margin = {
     top: MT,
     right: MR,
     bottom: MB,
-    left: ML
+    left: ML,
   };
-  await page.goto('file://' + path.join(__dirname, SRC_EN), {
-    waitUntil: HTML_LOADED_IND
+  await page.goto(`file://${path.join(__dirname, '..', SRC_EN)}`, {
+    waitUntil: HTML_LOADED_IND,
   });
   await page.emulateMediaType('print');
   await page.pdf({
     path: OUT_EN,
     margin,
-    format: OUT_EN_FORMAT
+    format: OUT_EN_FORMAT,
   });
-  await page.goto('file://' + path.join(__dirname, SRC_CN), {
-    waitUntil: HTML_LOADED_IND
+  await page.goto(`file://${path.join(__dirname, '..', SRC_CN)}`, {
+    waitUntil: HTML_LOADED_IND,
   });
   await page.emulateMediaType('print');
   await page.pdf({
     path: OUT_CN,
     margin,
-    format: OUT_CN_FORMAT
+    format: OUT_CN_FORMAT,
   });
   await browser.close();
 })();

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-pdf": "node build_pdf.js"
+    "build-pdf": "node src/build_pdf.js && node src/merge_pdf.js",
+    "lint": "bash lint.sh",
+    "stage-pdf": "git add *.pdf"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,8 @@
     "pre-commit": "^1.2.2"
   },
   "pre-commit": [
-    "build-pdf"
+    "lint",
+    "build-pdf",
+    "stage-pdf"
   ]
 }
