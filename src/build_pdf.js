@@ -7,14 +7,26 @@ const {
   ML,
   MR,
   MT,
-  OUT_CN_FORMAT,
-  OUT_CN,
-  OUT_EN_FORMAT,
-  OUT_EN,
-  SRC_CN,
-  SRC_EN,
+  DOCUMENTS,
 } = require('./constants');
 
+const buildPdf = async ({
+  page,
+  margin,
+  src,
+  out_format: outFormat,
+  out,
+}) => {
+  await page.goto(`file://${path.join(__dirname, '..', src)}`, {
+    waitUntil: HTML_LOADED_IND,
+  });
+  await page.emulateMediaType('print');
+  await page.pdf({
+    path: out,
+    margin,
+    format: outFormat,
+  });
+};
 (async () => {
   const browser = await puppeteer.launch({
     product: 'chrome',
@@ -30,23 +42,9 @@ const {
     bottom: MB,
     left: ML,
   };
-  await page.goto(`file://${path.join(__dirname, '..', SRC_EN)}`, {
-    waitUntil: HTML_LOADED_IND,
-  });
-  await page.emulateMediaType('print');
-  await page.pdf({
-    path: OUT_EN,
-    margin,
-    format: OUT_EN_FORMAT,
-  });
-  await page.goto(`file://${path.join(__dirname, '..', SRC_CN)}`, {
-    waitUntil: HTML_LOADED_IND,
-  });
-  await page.emulateMediaType('print');
-  await page.pdf({
-    path: OUT_CN,
-    margin,
-    format: OUT_CN_FORMAT,
-  });
+  for (let i = 0; i < DOCUMENTS.length; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    await buildPdf({ page, margin, ...DOCUMENTS[i] });
+  }
   await browser.close();
 })();

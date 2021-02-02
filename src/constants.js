@@ -5,11 +5,27 @@ module.exports = {
   ML: '0.4in',
   MR: '0.4in',
   MT: '0.4in',
-  OUT_CN_FORMAT: 'A4',
-  OUT_CN: 'Qian_Ke_cn.pdf',
-  OUT_EN_CN: 'Qian_Ke_en_cn.pdf',
-  OUT_EN_FORMAT: 'Letter',
-  OUT_EN: 'Qian_Ke.pdf',
-  SRC_CN: 'Qian_Ke_cn.html',
-  SRC_EN: 'Qian_Ke.html',
+  DOCUMENTS: [
+    {
+      name: 'cn',
+      src: 'Qian_Ke_cn.html',
+      out_format: 'A4',
+      out: 'Qian_Ke_cn.pdf',
+    },
+    {
+      name: 'en',
+      src: 'Qian_Ke.html',
+      out_format: 'Letter',
+      out: 'Qian_Ke.pdf',
+    },
+    {
+      name: 'cn-qt',
+      src: 'Qian_Ke_cn_qt.html',
+      out_format: 'A4',
+      out: 'Qian_Ke_cn_qt.pdf',
+    },
+  ],
+  COMBO: [
+    'Qian_Ke_en_cn.pdf', 'en', 'cn',
+  ],
 };

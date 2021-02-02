@@ -2,16 +2,18 @@ const {
   spawn,
 } = require('child_process');
 const {
-  OUT_CN,
-  OUT_EN_CN,
-  OUT_EN,
+  DOCUMENTS,
+  COMBO,
 } = require('./constants');
 
 const { error, log } = console;
 
 (async () => {
+  const sources = DOCUMENTS
+    .filter(({ name }) => COMBO.slice(1).includes(name))
+    .map(({ out }) => out);
   const pdftk = spawn('pdftk', [
-    OUT_EN, OUT_CN, 'cat', 'output', OUT_EN_CN,
+    ...sources, 'cat', 'output', COMBO[0],
   ]);
 
   pdftk.stderr.on('data', (data) => {
