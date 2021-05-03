@@ -24,6 +24,12 @@ module.exports = {
       out_format: 'A4',
       out: 'Qian_Ke_cn_qt.pdf',
     },
+    {
+      name: 'cn-2021',
+      src: 'Qian_Ke_cn_2021.html',
+      out_format: 'A4',
+      out: 'Qian_Ke_cn_2021.pdf',
+    },
   ],
   COMBO: [
     'Qian_Ke_en_cn.pdf', 'en', 'cn',
